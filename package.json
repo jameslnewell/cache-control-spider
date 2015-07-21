@@ -1,5 +1,5 @@
 {
-  "name": "cache-check-spider",
+  "name": "cache-control-spider",
   "dependencies": {
     "chalk": "^1.1.0",
     "emitter-on-steroids": "^2.0.4",
