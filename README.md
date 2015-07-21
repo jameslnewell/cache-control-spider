@@ -3,12 +3,16 @@
 Crawl a site for Cache-Control headers.
 
 - extracts URLs from HTML and CSS files
-- reports URLs grouped by Cache-Control headers
+- reports URLs grouped by distinct values for the Cache-Control header
 
 ## Installation
 
     $ git clone git@github.com:jameslnewell/cache-control-spider.git
     $ npm i
+
+## Usage
+
+    $ node index.js http://dev.online4.nib.com.au
 
 ## API
 
@@ -59,3 +63,17 @@ Emitted after the crawler has stopped crawling URLs.
 Emitted when an error occurs crawling a URL.
 
 - err : `Error` - the error
+
+### Plugins
+
+#### url-extractor-css(options)
+
+Extract URLs to crawl from CSS files.
+
+- accept : `function(url) : bool` - whether the URL should be crawled
+
+#### url-extractor-html(options)
+
+Extract URLs to crawl from HTML files.
+
+- accept : `function(url) : bool` - whether the URL should be crawled

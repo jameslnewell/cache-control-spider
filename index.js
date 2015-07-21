@@ -10,14 +10,14 @@ var CACHE_HEADER  = 'Cache-Control';
 var categories    = {};
 
 crawler()
-  .add('https://dev.online4.nib.com.au/')
+  .add(process.argv.length > 2 ? process.argv[2] : 'http://dev.online4.nib.com.au/')
   .use(extractCss({
-    filter: function(url) {
+    accept: function(url) {
       return NIB_URL.test(url);
     }
   }))
   .use(extractHtml({
-    filter: function(url) {
+    accept: function(url) {
       return NIB_URL.test(url);
     }
   }))
