@@ -2,10 +2,11 @@
   "name": "cache-control-spider",
   "dependencies": {
     "chalk": "^1.1.0",
+    "cookie": "^0.1.3",
     "emitter-on-steroids": "^2.0.4",
     "go-fetch": "^2.1.0",
     "go-fetch-content-type": "^0.3.0",
-    "go-fetch-follow-redirects": "^1.0.0",
+    "go-fetch-follow-redirects": "^1.0.1",
     "htmlparser2": "^3.8.3",
     "mime-types": "^2.1.3",
     "queue": "^3.1.0",
